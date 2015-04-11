@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+<title>Crossfilter</title>
+
+</head>
+
+<body>
+<div id="body">
+
+
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+@import url('css/crossfilter-example.css');
+
+@import url('css/dc.css');
+body {
+  font-family: "Helvetica Neue";
+  margin: 40px auto;
+  width: 960px;
+  min-height: 2000px;
+}
+
+#body {
+  position: relative;
+}
+
+
+</style>
+<div id="charts-dc" class="dashboard">
+  <div class="chart-container">
+    <div class="title">Time of Day</div>
+    <div id="hour-chart-dc" class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <div class="title">Arrival Delay (min.)</div>
+    <div id="delay-chart-dc" class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <div class="title">Distance (mi.)</div>
+    <div id="distance-chart-dc" class="chart"></div>
+  </div>
+  <div class="chart-container">
+    <div class="title">Date</div>
+    <div id="date-chart-dc" class="chart"></div>
+  </div>
+</div>
+
+<aside id='totals-dc'>
+        <span class='filter-count'></span> of <span class='total-count'></span> flights.
+</aside>
+
+<div id="lists-dc">
+  <div id="flight-list-dc" class="list"></div>
+</div>
+
+<footer>
+</footer>
+
+</div>
+
+
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="js/crossfilter.min.js"></script>
+<script type="text/javascript" src="js/dc.min.js"></script>
+
+<script type="text/javascript" src="js/crossfilter-with-dc.js"></script>
+<script>crossfilter_with_dc("data/flights-3m.json");</script>
+</body>
+</html>
